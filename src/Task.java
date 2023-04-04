@@ -1,10 +1,9 @@
-
 import exceptions.WrongInputException;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Task {
+public abstract class Task {
     private String title;
     private String description;
     private TaskType taskType;
@@ -68,13 +67,14 @@ public class Task {
 
     public abstract boolean checkAppearsDate(LocalDateTime localDateTime); // проверяет должна ли задача выполнятся на указанную в параметрах дату
 
-    @Override
-    public boolean equals(Object o) {
-        // уточнить код
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        // уточнить код
+//    }
     @Override
     public int hashCode() {
-        return Object.hash(title, description, taskType, firstDate, archived, id);
+        return Objects.hash
+                (title, description, taskType, firstDate, archived, id);
     }
 
     @Override

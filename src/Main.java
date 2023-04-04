@@ -23,7 +23,7 @@ public class Main {
                             MyFaseBook.getTasksByDay(scanner);
                             break;
                         case 5:
-                            MyFaseBook.printArchivedTasks(scanner);
+                            MyFaseBook.printArchivedTasks();
                             break;
                         case 6:
                             MyFaseBook.getGroupedByDate();

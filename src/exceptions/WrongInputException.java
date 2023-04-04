@@ -1,8 +1,8 @@
 package exceptions;
 
-public class WrongInputException {
-
-    public boolean getMessage() {
-        return getMessage();
+public class WrongInputException extends RuntimeException {
+    public WrongInputException(String message){
+        super(message);
     }
+
 }
