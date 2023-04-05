@@ -7,7 +7,7 @@ public abstract class Task {
     private String title;
     private String description;
     private TaskType taskType;
-    private final LocalDateTime firstDate;
+    private LocalDateTime firstDate;
     private static Integer counter = 1;
     private final Integer id;
     private boolean archived;
@@ -33,7 +33,7 @@ public abstract class Task {
         return description;
     }
 
-     public LocalDateTime getFirstDate() {
+    public LocalDateTime getFirstDate() {
         return firstDate;
     }
 
@@ -67,10 +67,10 @@ public abstract class Task {
 
     public abstract boolean checkAppearsDate(LocalDateTime localDateTime); // проверяет должна ли задача выполнятся на указанную в параметрах дату
 
-//    @Override
-//    public boolean equals(Object o) {
-//        // уточнить код
-//    }
+    public void setFirstDate(LocalDateTime firstDate) {
+        this.firstDate = firstDate;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash

@@ -71,18 +71,18 @@ public class MyFaseBook {
                     task.setTitle(description);
                 }
                 case 2 -> {
-//                    scanner.nextLine();
-//                    System.out.println("Введите тип задачи:");
-//                    String taskType = scanner.nextLine();
-//                    Task task = actualTasks.get(id);
-//                    task.setTaskType(taskType);
+                    scanner.nextLine();
+                    System.out.println("Введите тип задачи:");
+                    TaskType taskType = TaskType.valueOf(scanner.nextLine());
+                    Task task = actualTasks.get(id);
+                    task.setTaskType(taskType);
                 }
                 case 3 -> {
-//                    scanner.nextLine();
-//                    System.out.println("Введите дату задачи:");
-//                    appearsDate = scanner.nextLine();
-//                    Task task = actualTasks.get(id);
-//                    task.g();
+                    scanner.nextLine();
+                    System.out.println("Введите дату задачи:");
+                    LocalDateTime appearsDate = LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
+                    Task task = actualTasks.get(id);
+                    task.setFirstDate(appearsDate);
                 }
             }
         } catch (TaskNotFoundException e) {
